@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE BETTER ONE COMPANY Ltd - Quality Hardware & Construction</title>
+
+<style>
+:root {
+  --primary: #0066cc;
+  --accent: #00ffd0;
+  --accent-dark: #00cca8;
+  --light: #eaf3ff;
+  --dark: #062f6d;
+  --card-bg: rgba(255, 255, 255, 0.15);
+  --footer-bg: rgba(0, 0, 0, 0.35);
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at 50% 0%, #4da3ff, #003d8f, #062f6d);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+  overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 25px 40px;
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  margin-top: 30px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 95%;
+  max-width: 1300px;
+  animation: fadeIn 1s ease-out;
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--light);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.5px;
+}
+
+/* ===== MAIN CARD ===== */
+.main-card {
+  width: 95%;
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 50px 60px;
+  border-radius: 30px;
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 0.8s ease-out;
+}
+
+.main-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(to right, var(--accent), var(--primary));
+}
+
+.card-logo {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border: 3px solid var(--accent);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+  font-size: 22px;
+  color: var(--accent);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== TYPING ANIMATION ===== */
+.typing-container {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 900px;
+  border-left: 4px solid var(--accent);
+}
+
+.typing {
+  font-size: 28px;
+  line-height: 1.6;
+  min-height: 220px;
+  color: var(--light);
+  font-weight: 500;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.cursor {
+  display: inline-block;
+  width: 4px;
+  height: 40px;
+  background: var(--accent);
+  margin-left: 8px;
+  animation: blink 1s infinite, pulse 2s infinite;
+}
+
+/* ===== SYNC STATUS ===== */
+.sync-status {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.status-icon {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 2s infinite;
+}
+
+.status-text {
+  color: var(--light);
+  font-weight: 500;
+}
+
+.status-value {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ===== FAST GALLERY CARD ===== */
+.fast-gallery-card {
+  width: 95%;
+  max-width: 1400px;
+  margin: 30px auto;
+  padding: 40px;
+  border-radius: 30px;
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.fast-gallery-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(to right, #ff6b6b, #4ecdc4, #45b7d1);
+  animation: gradientShift 5s infinite alternate;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.gallery-title {
+  font-size: 32px;
+  color: var(--light);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.gallery-info {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.gallery-speed {
+  font-size: 16px;
+  color: var(--accent);
+  background: rgba(0, 255, 208, 0.1);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.gallery-timer {
+  font-size: 16px;
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.1);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* ===== FAST GALLERY LAYOUT ===== */
+.fast-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  height: 500px;
+}
+
+.gallery-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.current-category {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.category-name {
+  font-size: 24px;
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.category-count {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.main-image-container {
+  flex: 1;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.main-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.main-image-container:hover img {
+  transform: scale(1.05);
+}
+
+.image-number {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.gallery-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.category-images {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.category-images::-webkit-scrollbar {
+  width: 6px;
+}
+
+.category-images::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.category-images::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+.category-image {
+  height: 110px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.category-image:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.category-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-image-number {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+/* ===== GALLERY CONTROLS ===== */
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.control-btn {
+  padding: 10px 20px;
+  background: var(--accent);
+  color: #003366;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.control-btn:hover {
+  background: var(--accent-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.control-btn i {
+  font-size: 16px;
+}
+
+.control-btn.speed-up {
+  background: #ff6b6b;
+}
+
+.control-btn.speed-up:hover {
+  background: #ff5252;
+}
+
+.control-btn.slow-down {
+  background: #4ecdc4;
+}
+
+.control-btn.slow-down:hover {
+  background: #45b7d1;
+}
+
+/* ===== PRODUCTS & SERVICES SECTION ===== */
+.products-services {
+  width: 95%;
+  max-width: 1400px;
+  margin-top: 50px;
+  padding: 40px 30px;
+  background: var(--footer-bg);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-title {
+  font-size: 28px;
+  color: var(--accent);
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+  text-align: left;
+  backdrop-filter: blur(10px);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--accent);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.product-icon {
+  font-size: 40px;
+  color: var(--accent);
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(0, 255, 208, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-title {
+  font-size: 24px;
+  color: var(--light);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.product-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===== CTA BUTTONS ===== */
+.actions {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.actions a {
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #003366;
+  background: var(--accent);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.actions a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  background: var(--accent-dark);
+}
+
+/* ===== CONTACT FOOTER ===== */
+.contact-footer {
+  margin-top: 40px;
+  padding: 25px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.contact-item i {
+  font-size: 22px;
+}
+
+/* ===== FLOATING BUTTONS ===== */
+.float {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 100;
+}
+
+.float a {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.float a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.3s;
+}
+
+.float a:hover::after {
+  transform: scale(1);
+}
+
+.float a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.whatsapp {
+  background: linear-gradient(135deg, #25D366, #1da851);
+}
+
+.call {
+  background: linear-gradient(135deg, #007bff, #0056cc);
+}
+
+/* ===== MUSIC CONTROLS ===== */
+.music-controls {
+  position: fixed;
+  left: 25px;
+  bottom: 25px;
+  z-index: 100;
+}
+
+.music-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(0, 255, 208, 0.4);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 0 10px rgba(0, 255, 208, 0);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes imageTransition {
+  0% { opacity: 0.5; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+  header h1 { font-size: 30px; }
+  .typing { font-size: 26px; min-height: 200px; }
+  .fast-gallery { 
+    grid-template-columns: 1fr;
+    height: 800px;
+  }
+  .category-images {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  header { flex-direction: column; text-align: center; padding: 20px; }
+  header h1 { font-size: 26px; }
+  .main-card { padding: 30px 20px; }
+  .typing { font-size: 22px; min-height: 180px; }
+  .tagline { font-size: 18px; letter-spacing: 2px; }
+  .actions a { padding: 14px 24px; font-size: 16px; }
+  .contact-footer { font-size: 16px; }
+  .float a { width: 60px; height: 60px; font-size: 24px; }
+  .music-btn { width: 50px; height: 50px; font-size: 20px; left: 15px; bottom: 15px; }
+  .products-grid { grid-template-columns: 1fr; }
+  .fast-gallery { height: 700px; }
+  .category-images { grid-template-columns: repeat(2, 1fr); }
+  .gallery-title { font-size: 24px; }
+  .category-name { font-size: 20px; }
+}
+
+@media (max-width: 480px) {
+  header h1 { font-size: 22px; }
+  .typing { font-size: 20px; min-height: 160px; }
+  .actions { flex-direction: column; align-items: center; }
+  .actions a { width: 90%; justify-content: center; }
+  .contact-footer { flex-direction: column; align-items: center; }
+  .fast-gallery { height: 600px; }
+  .category-images { grid-template-columns: 1fr; }
+  .gallery-controls { flex-direction: column; align-items: center; }
+  .control-btn { width: 100%; justify-content: center; }
+}
+</style>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Background Audio -->
+<audio id="backgroundMusic" loop>
+  <source src="/audio/ROYALTY_FREE_Event_Presentation_Music___Chill_Hop_Instrumental_Music_Royalty_Free_by_MUSIC4VIDEO(256k).mp3" type="audio/mpeg">
+</audio>
+
+<!-- Music Control -->
+<div class="music-controls">
+  <button class="music-btn" id="musicToggle">
+    <i class="fas fa-music"></i>
+  </button>
+</div>
+
+<header>
+  <img src="/image/file_000000004aac72308d185776aac98e5e.png" alt="THE BETTER ONE COMPANY Logo">
+  <h1>THE BETTER ONE COMPANY Ltd</h1>
+</header>
+
+<div class="main-card">
+  <img src="/image/file_000000004aac72308d185776aac98e5e.png" class="card-logo" alt="Company Logo">
+  
+  <div class="tagline">Quality • Reliability • Professional Service</div>
+  
+  <div class="typing-container">
+    <div class="typing" id="typing"></div><span class="cursor"></span>
+  </div>
+  
+  <!-- Status Display -->
+  <div class="sync-status">
+    <div class="status-item">
+      <div class="status-icon"></div>
+      <span class="status-text">Typing Speed:</span>
+      <span class="status-value" id="typingSpeed">Normal</span>
+    </div>
+    <div class="status-item">
+      <div class="status-icon" style="background: #ff6b6b;"></div>
+      <span class="status-text">Image Speed:</span>
+      <span class="status-value" id="imageSpeed">Fast</span>
+    </div>
+    <div class="status-item">
+      <div class="status-icon" style="background: #4ecdc4;"></div>
+      <span class="status-text">Images Shown:</span>
+      <span class="status-value" id="imagesShown">0/28</span>
+    </div>
+  </div>
+  
+  <div class="actions">
+    <a href="tel:0781264120"><i class="fas fa-phone-alt"></i> Call Now</a>
+    <a href="https://wa.me/250781264120" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a href="https://thebetteronecompanyltd.netlify.app" target="_blank"><i class="fas fa-globe"></i> Visit Website</a>
+  </div>
+  
+  <div class="contact-footer">
+    <div class="contact-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>📍 GIKONDO MEREZE 1</span>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-phone"></i>
+      <span>📞 0781264120 / 0788704173</span>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <span>✉ thebetteronecompanyltd@gmail.com</span>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-link"></i>
+      <span>🌐 thebetteronecompanyltd.netlify.app</span>
+    </div>
+  </div>
+</div>
+
+<!-- FAST ROTATING GALLERY CARD -->
+<div class="fast-gallery-card">
+  <div class="gallery-header">
+    <h2 class="gallery-title">Fast Products Gallery</h2>
+    <div class="gallery-info">
+      <div class="gallery-speed" id="gallerySpeed">Speed: 2s/image</div>
+      <div class="gallery-timer" id="galleryTimer">Time: 56s</div>
+    </div>
+  </div>
+  
+  <div class="fast-gallery">
+    <div class="gallery-left">
+      <div class="current-category">
+        <div class="category-name" id="currentCategory">Hardware Products</div>
+        <div class="category-count" id="categoryCount">Category 1 of 4 • 7 images</div>
+      </div>
+      <div class="main-image-container">
+        <img src="/image/IMG-20260117-WA0005.jpg" alt="Product 1" id="mainImage">
+        <div class="image-number" id="imageNumber">Image 1</div>
+      </div>
+    </div>
+    
+    <div class="gallery-right">
+      <div class="category-images" id="categoryImages">
+        <!-- Category images will be loaded here by JavaScript -->
+      </div>
+    </div>
+  </div>
+  
+  <div class="gallery-controls">
+    <button class="control-btn" onclick="pauseGallery()" id="pauseBtn">
+      <i class="fas fa-pause"></i> Pause
+    </button>
+    <button class="control-btn" onclick="resumeGallery()" id="resumeBtn" style="display: none;">
+      <i class="fas fa-play"></i> Resume
+    </button>
+    <button class="control-btn speed-up" onclick="increaseSpeed()">
+      <i class="fas fa-forward"></i> Faster
+    </button>
+    <button class="control-btn slow-down" onclick="decreaseSpeed()">
+      <i class="fas fa-backward"></i> Slower
+    </button>
+    <button class="control-btn" onclick="restartPresentation()">
+      <i class="fas fa-redo"></i> Restart
+    </button>
+  </div>
+</div>
+
+<!-- PRODUCTS & SERVICES SECTION -->
+<div class="products-services">
+  <h2 class="section-title">Products & Services</h2>
+  
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-icon">
+        <i class="fas fa-tools"></i>
+      </div>
+      <h3 class="product-title">Hardware</h3>
+      <p class="product-description">All types of quality hardware for construction, maintenance, and industrial applications. We supply durable tools, fasteners, and equipment from trusted manufacturers.</p>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-icon">
+        <i class="fas fa-faucet"></i>
+      </div>
+      <h3 class="product-title">Plumbing</h3>
+      <p class="product-description">Taps, pipes & accessories for residential and commercial plumbing systems. We offer complete plumbing solutions with quality materials and professional installation.</p>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-icon">
+        <i class="fas fa-hammer"></i>
+      </div>
+      <h3 class="product-title">Construction</h3>
+      <p class="product-description">Building materials & tools for all construction projects. From foundation to finishing, we provide everything you need for successful construction projects.</p>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-icon">
+        <i class="fas fa-handshake"></i>
+      </div>
+      <h3 class="product-title">Reliable Service</h3>
+      <p class="product-description">Professional & on-time service delivery with expert consultation. Our team ensures timely delivery, proper installation, and ongoing support for all our products.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FLOATING ACTION BUTTONS -->
+<div class="float">
+  <a href="https://wa.me/250781264120" class="whatsapp" title="WhatsApp Us">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="tel:0781264120" class="call" title="Call Us">
+    <i class="fas fa-phone-alt"></i>
+  </a>
+</div>
+
+<script>
+// ALL 28 IMAGES
+const allImages = [
+  "/image/IMG-20260117-WA0005.jpg",
+  "/image/IMG-20260117-WA0006.jpg",
+  "/image/IMG-20260117-WA0007.jpg",
+  "/image/IMG-20260117-WA0008.jpg",
+  "/image/IMG-20260117-WA0009.jpg",
+  "/image/IMG-20260117-WA0010.jpg",
+  "/image/IMG-20260117-WA0011.jpg",
+  "/image/IMG-20260117-WA0013.jpg",
+  "/image/IMG-20260117-WA0014.jpg",
+  "/image/IMG-20260117-WA0015.jpg",
+  "/image/IMG-20260117-WA0016.jpg",
+  "/image/IMG-20260117-WA0017.jpg",
+  "/image/IMG-20260117-WA0018.jpg",
+  "/image/IMG-20260117-WA0019.jpg",
+  "/image/IMG-20260117-WA0020.jpg",
+  "/image/IMG-20260117-WA0021.jpg",
+  "/image/IMG-20260117-WA0022.jpg",
+  "/image/IMG-20260117-WA0023.jpg",
+  "/image/IMG-20260117-WA0025.jpg",
+  "/image/IMG-20260117-WA0026.jpg",
+  "/image/IMG-20260117-WA0028.jpg",
+  "/image/IMG-20260117-WA0029.jpg",
+  "/image/IMG-20260117-WA0030.jpg",
+  "/image/IMG-20260117-WA0031.jpg",
+  "/image/IMG-20260117-WA0032.jpg",
+  "/image/IMG-20260117-WA0033.jpg",
+  "/image/IMG-20260117-WA0034.jpg",
+  "/image/file_000000004aac72308d185776aac98e5e.png"
+];
+
+// Category configuration
+const categories = [
+  { name: "Hardware Products", images: allImages.slice(0, 7) },
+  { name: "Plumbing Materials", images: allImages.slice(7, 14) },
+  { name: "Construction Tools", images: allImages.slice(14, 21) },
+  { name: "Complete Solutions", images: allImages.slice(21, 28) }
+];
+
+// Typing messages
+const typingMessages = [
+ "THE BETTER ONE COMPANY Ltd - Your trusted partner for all hardware and construction needs.",
+ "Ducuruza ibirahuri by'amoko yose n'ibikoresho byiza bya Quincaillerie.",
+ "Dutanga robinet, imiyoboro y'amazi n'ibikoresho by'ubwubatsi bifite ubuziranenge.",
+ "Iyo wubaka cyangwa usana, THE BETTER ONE COMPANY Ltd iba ihari kugufasha.",
+ "THE BETTER ONE COMPANY Ltd – umufatanyabikorwa wizewe mu bwubatsi.",
+ "Quality hardware, plumbing materials, and construction tools for all your projects.",
+ "We supply: Nails, screws, hinges, locks, door handles, and all metal fittings.",
+ "Complete plumbing solutions: PVC pipes, copper pipes, taps, showers, and fittings.",
+ "Construction materials: Cement, sand, aggregates, bricks, and roofing materials.",
+ "Professional installation services and expert advice for all your projects.",
+ "Serving residential, commercial, and industrial clients across Rwanda.",
+ "Visit our showroom in Gikondo Mereze 1 or contact us for delivery.",
+ "Why choose us? Quality products, competitive prices, and reliable service.",
+ "Call us today: 0781264120 / 0788704173 for a free consultation.",
+ "Email: thebetteronecompanyltd@gmail.com for quotations and inquiries.",
+ "Visit our website: thebetteronecompanyltd.netlify.app for more information.",
+ "We guarantee: On-time delivery, professional installation, and after-sales support.",
+ "Your satisfaction is our priority - THE BETTER ONE COMPANY Ltd."
+];
+
+// State variables
+let currentTypingMessage = 0;
+let typingCharIndex = 0;
+const typingElement = document.getElementById("typing");
+let typingSpeed = 35; // Normal typing speed (unchanged)
+
+let currentImageIndex = 0;
+let currentCategoryIndex = 0;
+let imagesShown = 0;
+let imageInterval;
+let imageSpeed = 2000; // Start with 2 seconds per image (FAST)
+let isGalleryRunning = true;
+
+// DOM Elements
+const mainImageElement = document.getElementById("mainImage");
+const imageNumberElement = document.getElementById("imageNumber");
+const currentCategoryElement = document.getElementById("currentCategory");
+const categoryCountElement = document.getElementById("categoryCount");
+const categoryImagesElement = document.getElementById("categoryImages");
+const imagesShownElement = document.getElementById("imagesShown");
+const imageSpeedElement = document.getElementById("imageSpeed");
+const gallerySpeedElement = document.getElementById("gallerySpeed");
+const galleryTimerElement = document.getElementById("galleryTimer");
+const pauseBtn = document.getElementById("pauseBtn");
+const resumeBtn = document.getElementById("resumeBtn");
+const backgroundMusic = document.getElementById("backgroundMusic");
+const musicToggleBtn = document.getElementById("musicToggle");
+
+// Initialize gallery
+function initializeGallery() {
+  // Load first category
+  loadCategory(currentCategoryIndex);
+  
+  // Start image rotation
+  startImageRotation();
+  
+  // Start typing
+  startTyping();
+  
+  // Update timer display
+  updateTimerDisplay();
+}
+
+// Load category images
+function loadCategory(categoryIndex) {
+  const category = categories[categoryIndex];
+  
+  // Update category info
+  currentCategoryElement.textContent = category.name;
+  categoryCountElement.textContent = `Category ${categoryIndex + 1} of ${categories.length} • ${category.images.length} images`;
+  
+  // Set main image
+  currentImageIndex = 0;
+  updateMainImage();
+  
+  // Load category thumbnails
+  categoryImagesElement.innerHTML = '';
+  category.images.forEach((imgSrc, index) => {
+    const imgElement = document.createElement('div');
+    imgElement.className = 'category-image';
+    imgElement.onclick = () => {
+      currentImageIndex = index;
+      updateMainImage();
+    };
+    
+    imgElement.innerHTML = `
+      <div class="category-image-number">${index + 1}</div>
+      <img src="${imgSrc}" alt="Product ${index + 1}">
+    `;
+    
+    categoryImagesElement.appendChild(imgElement);
+  });
+}
+
+// Update main image
+function updateMainImage() {
+  const category = categories[currentCategoryIndex];
+  const imageSrc = category.images[currentImageIndex];
+  const imageNumber = (currentCategoryIndex * 7) + currentImageIndex + 1;
+  
+  // Apply animation
+  mainImageElement.style.animation = 'imageTransition 0.5s ease-out';
+  setTimeout(() => {
+    mainImageElement.style.animation = '';
+  }, 500);
+  
+  // Update image
+  mainImageElement.src = imageSrc;
+  imageNumberElement.textContent = `Image ${imageNumber}`;
+  
+  // Update counter
+  imagesShown++;
+  imagesShownElement.textContent = `${imagesShown}/28`;
+}
+
+// Start image rotation
+function startImageRotation() {
+  if (imageInterval) clearInterval(imageInterval);
+  
+  imageInterval = setInterval(() => {
+    if (!isGalleryRunning) return;
+    
+    const category = categories[currentCategoryIndex];
+    
+    // Move to next image
+    currentImageIndex++;
+    
+    // If we've shown all images in this category
+    if (currentImageIndex >= category.images.length) {
+      currentImageIndex = 0;
+      currentCategoryIndex++;
+      
+      // If we've shown all categories, restart from beginning
+      if (currentCategoryIndex >= categories.length) {
+        currentCategoryIndex = 0;
+      }
+      
+      // Load new category
+      loadCategory(currentCategoryIndex);
+    } else {
+      // Update main image within current category
+      updateMainImage();
+    }
+  }, imageSpeed);
+}
+
+// Start typing animation
+function startTyping() {
+  if (typingCharIndex < typingMessages[currentTypingMessage].length) {
+    typingElement.textContent += typingMessages[currentTypingMessage].charAt(typingCharIndex);
+    typingCharIndex++;
+    setTimeout(startTyping, typingSpeed);
+  } else {
+    // Move to next message after delay
+    setTimeout(() => {
+      if (currentTypingMessage < typingMessages.length - 1) {
+        currentTypingMessage++;
+        typingCharIndex = 0;
+        typingElement.textContent = "";
+        startTyping();
+      } else {
+        // All messages completed, restart
+        setTimeout(() => {
+          currentTypingMessage = 0;
+          typingCharIndex = 0;
+          typingElement.textContent = "";
+          startTyping();
+        }, 3000);
+      }
+    }, 2000);
+  }
+}
+
+// Control functions
+function pauseGallery() {
+  isGalleryRunning = false;
+  clearInterval(imageInterval);
+  pauseBtn.style.display = 'none';
+  resumeBtn.style.display = 'flex';
+}
+
+function resumeGallery() {
+  isGalleryRunning = true;
+  startImageRotation();
+  pauseBtn.style.display = 'flex';
+  resumeBtn.style.display = 'none';
+}
+
+function increaseSpeed() {
+  // Increase speed (decrease interval)
+  if (imageSpeed > 500) { // Minimum 0.5 seconds
+    imageSpeed -= 500;
+    updateSpeedDisplay();
+    if (isGalleryRunning) {
+      clearInterval(imageInterval);
+      startImageRotation();
+    }
+  }
+}
+
+function decreaseSpeed() {
+  // Decrease speed (increase interval)
+  if (imageSpeed < 5000) { // Maximum 5 seconds
+    imageSpeed += 500;
+    updateSpeedDisplay();
+    if (isGalleryRunning) {
+      clearInterval(imageInterval);
+      startImageRotation();
+    }
+  }
+}
+
+function updateSpeedDisplay() {
+  const speedText = `${imageSpeed/1000}s/image`;
+  const speedLevel = imageSpeed <= 1000 ? "Very Fast" : 
+                    imageSpeed <= 2000 ? "Fast" : 
+                    imageSpeed <= 3000 ? "Normal" : "Slow";
+  
+  gallerySpeedElement.textContent = `Speed: ${speedText}`;
+  imageSpeedElement.textContent = speedLevel;
+  updateTimerDisplay();
+}
+
+function updateTimerDisplay() {
+  // Calculate total time for all images
+  const totalTime = (imageSpeed * 28) / 1000;
+  galleryTimerElement.textContent = `Time: ${totalTime}s`;
+}
+
+function restartPresentation() {
+  // Reset everything
+  currentImageIndex = 0;
+  currentCategoryIndex = 0;
+  imagesShown = 0;
+  
+  // Reset typing
+  currentTypingMessage = 0;
+  typingCharIndex = 0;
+  typingElement.textContent = "";
+  
+  // Restart gallery
+  loadCategory(currentCategoryIndex);
+  if (isGalleryRunning) {
+    clearInterval(imageInterval);
+    startImageRotation();
+  }
+  
+  // Update displays
+  imagesShownElement.textContent = "0/28";
+  updateSpeedDisplay();
+  
+  // Restart typing
+  setTimeout(startTyping, 1000);
+}
+
+// Music control functions
+function toggleMusic() {
+  if (backgroundMusic.paused) {
+    backgroundMusic.play();
+    musicToggleBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+    musicToggleBtn.style.background = 'linear-gradient(135deg, #4ecdc4, #45b7d1)';
+  } else {
+    backgroundMusic.pause();
+    musicToggleBtn.innerHTML = '<i class="fas fa-music"></i>';
+    musicToggleBtn.style.background = 'linear-gradient(135deg, #ff6b6b, #4ecdc4)';
+  }
+}
+
+// Initialize everything
+initializeGallery();
+
+// Add event listeners
+musicToggleBtn.addEventListener('click', toggleMusic);
+
+// Auto-start music after a delay (with user interaction)
+document.addEventListener('click', function initMusic() {
+  if (backgroundMusic.paused) {
+    backgroundMusic.volume = 0.5;
+    backgroundMusic.play().catch(e => console.log("Audio play failed:", e));
+  }
+  document.removeEventListener('click', initMusic);
+}, { once: true });
+
+// Add hover effect to product cards
+document.querySelectorAll('.product-card').forEach(card => {
+  card.addEventListener('mouseenter', function() {
+    this.style.transform = 'translateY(-8px)';
+  });
+  
+  card.addEventListener('mouseleave', function() {
+    this.style.transform = 'translateY(0)';
+  });
+});
+
+// Error handling for images
+document.querySelectorAll('img').forEach(img => {
+  img.onerror = function() {
+    console.log('Failed to load image:', this.src);
+  };
+});
+</script>
+
+</body>
+</html>
